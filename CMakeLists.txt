@@ -16,11 +16,6 @@ project(FasterTransformer LANGUAGES CXX CUDA)
 
 find_package(CUDA 10.2 REQUIRED)
 
-if(${CUDA_VERSION_MAJOR} VERSION_GREATER_EQUAL "11")
-  add_definitions("-DENABLE_BF16")
-  message("CUDA_VERSION ${CUDA_VERSION_MAJOR} is greater or equal than 11, enable -DENABLE_BF16 flag")
-endif()
-
 option(BUILD_CUTLASS_MOE "Builds CUTLASS kernels supporting MoE GEMM" ON)
 if(BUILD_CUTLASS_MOE)
   message(STATUS "Add DBUILD_CUTLASS_MOE, requires CUTLASS. Increases compilation time")

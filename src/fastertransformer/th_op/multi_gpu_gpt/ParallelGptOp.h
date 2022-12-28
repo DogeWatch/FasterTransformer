@@ -293,7 +293,7 @@ public:
                                     ft::getSMVersion(),
                                     true,
                                     max_input_length,  // gpt supports any-seq-length fmha
-                                    true,              // is_fuse
+                                    false,              // is_fuse
                                     false,             // with_relative_position_bias
                                     true);             // causal_mask
 

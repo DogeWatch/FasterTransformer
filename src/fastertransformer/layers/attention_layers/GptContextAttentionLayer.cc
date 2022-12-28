@@ -434,7 +434,7 @@ GptContextAttentionLayer<T>::GptContextAttentionLayer(size_t           max_batch
     int8_mode_(int8_mode)
 {
     FT_LOG_DEBUG(__PRETTY_FUNCTION__);
-    dispatcher_fp16.reset(new FusedMHARunnerFP16v2(local_head_num_, size_per_head_, sm_, 1.0f));
+    //dispatcher_fp16.reset(new FusedMHARunnerFP16v2(local_head_num_, size_per_head_, sm_, 1.0f));
 }
 
 template<typename T>
@@ -467,7 +467,7 @@ GptContextAttentionLayer<T>::GptContextAttentionLayer(size_t           max_batch
     int8_mode_(int8_mode)
 {
     FT_LOG_DEBUG(__PRETTY_FUNCTION__);
-    dispatcher_fp16.reset(new FusedMHARunnerFP16v2(local_head_num_, size_per_head_, sm_, 1.0f));
+    //dispatcher_fp16.reset(new FusedMHARunnerFP16v2(local_head_num_, size_per_head_, sm_, 1.0f));
 }
 
 template<typename T>
